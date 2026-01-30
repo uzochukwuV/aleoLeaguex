@@ -14,7 +14,7 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     <AeoWalletProvider
       wallets={wallets}
       autoConnect={true}
-      network={WalletAdapterNetwork.TestnetBeta}
+      network={WalletAdapterNetwork.Testnet}
     >
       {children}
     </AeoWalletProvider>

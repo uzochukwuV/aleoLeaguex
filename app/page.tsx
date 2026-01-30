@@ -17,11 +17,9 @@ export default function Home() {
       
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Tab Navigation */}
-            <div className="glass-effect p-4">
-              <div className="flex gap-2">
+            <div className="glass-effect p-4 rounded-lg">
+              <div className="flex gap-2 flex-wrap">
                 <button
                   onClick={() => setActiveTab('markets')}
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -55,13 +53,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Content Area */}
             {activeTab === 'markets' && <BettingMarkets />}
             {activeTab === 'standings' && <StandingsPanel />}
             {activeTab === 'history' && <TransactionHistory />}
           </div>
 
-          {/* Bet Slip Panel - Sticky on Desktop */}
           {showBetSlip && (
             <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)]">
               <BetSlipPanel onClose={() => setShowBetSlip(false)} />

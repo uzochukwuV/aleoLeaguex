@@ -3,7 +3,7 @@
 import { mockTeamStandings } from '@/lib/mock-data';
 import { Trophy } from 'lucide-react';
 
-export function StandingsPanel() {
+function StandingsPanelComponent() {
   const standings = mockTeamStandings;
 
   return (
@@ -100,3 +100,5 @@ export function StandingsPanel() {
     </div>
   );
 }
+
+export { StandingsPanelComponent as StandingsPanel };

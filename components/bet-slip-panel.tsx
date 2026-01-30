@@ -8,7 +8,7 @@ import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';
 import { ParlayBuilder } from './parlay-builder';
 import { toast } from 'sonner';
 
-export function BetSlipPanel({ onClose }: { onClose: () => void }) {
+function BetSlipPanelComponent({ onClose }: { onClose: () => void }) {
   const { bets, removeBet, updateStake, clearBets } = useBetSlip();
   const { placeBet, loading, error, clearError } = useContract();
   const { connected } = useWallet();
@@ -233,3 +233,6 @@ export function BetSlipPanel({ onClose }: { onClose: () => void }) {
     </div>
   );
 }
+
+export { BetSlipPanelComponent as BetSlipPanel };
+export default BetSlipPanelComponent;

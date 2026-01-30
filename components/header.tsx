@@ -6,7 +6,7 @@ import { Menu, X, ShoppingCart, Zap } from 'lucide-react';
 import { useState } from 'react';
 import { WalletStatus } from './wallet-status';
 
-export function Header({ onToggleBetSlip }: { onToggleBetSlip: () => void }) {
+function HeaderComponent({ onToggleBetSlip }: { onToggleBetSlip: () => void }) {
   const { connected } = useWallet();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -84,6 +84,8 @@ export function Header({ onToggleBetSlip }: { onToggleBetSlip: () => void }) {
             </button>
           </div>
         </div>
+          </div>
+        </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
@@ -106,3 +108,6 @@ export function Header({ onToggleBetSlip }: { onToggleBetSlip: () => void }) {
     </header>
   );
 }
+
+export { HeaderComponent as Header };
+export default HeaderComponent;

@@ -5,7 +5,7 @@ import { Clock, TrendingUp } from 'lucide-react';
 import { MatchCard } from './match-card';
 import { mockMatches } from '@/lib/mock-data';
 
-export function BettingMarkets() {
+function BettingMarketsComponent() {
   const [sortBy, setSortBy] = useState<'time' | 'odds'>('time');
   const [filterTeam, setFilterTeam] = useState<string>('all');
 
@@ -103,3 +103,6 @@ export function BettingMarkets() {
     </div>
   );
 }
+
+export { BettingMarketsComponent as BettingMarkets };
+export default BettingMarketsComponent;
